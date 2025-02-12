@@ -1,0 +1,32 @@
+1 -> Creating scaffold
+2 -> Cleaning
+3 -> Git setup
+4 -> Tailwind CSS setup
+5 -> Rough Roadmap
+6 -> Structure
+App -> Body
+Body -> Login, Browse (for router setup)
+Login -> Header, form
+7 -> Add router
+8 -> Login 
+8 -> Form
+9 -> FV
+10 -> Error display
+11 -> Firebase setup
+12 -> Sign Up (Using API, Redux, Redirection)
+13 -> Log In (Using API, Redux, Redirection)
+14 -> Header of browse page 
+15 -> Sign Out (Using API, Redux)
+16 -> Bug (Refresh)
+17 -> Redirection
+18 -> Clean up function
+19 -> constants.js
+20 -> TMDB API (Using API, Redux)
+21 -> Custom hook
+22 -> MainContainer
+23 -> SecondaryContainer
+24 -> VideoTitle
+25 -> VideoBg
+27 -> TMDB API (Using API, Redux)
+28 -> Video Integration
+
