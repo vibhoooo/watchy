@@ -82,9 +82,9 @@ const Login = () => {
 				<input className="text-white bg-gray-500 rounded-lg p-4 my-6 mx-1 w-full border border-black" type="text" placeholder="Email id" ref={email} />
 				<input className="text-white bg-gray-500 rounded-lg p-4 my-6 mx-1 w-full border border-black" type="password" placeholder="Password" ref={password} />
 				{error && <p className="text-red-500 text-lg my-3 mx-1 w-full ">Incorrect Email id or Password</p>}
-				<button className="text-white bg-red-500 rounded-lg p-4 my-6 mx-1 w-full border border-black" onClick={handleSubmit}>{islogin ? "Log In" : "Sign Up"}</button>
-				{(islogin) && <button className="text-white text-sm my-6 mx-1 w-full" onClick={handleClick}>New user? Sign Up</button>}
-				{(!islogin) && <button className="text-white text-sm my-6 mx-1 w-full" onClick={handleClick}>Already a user? Log In</button>}
+				<button className="text-white bg-red-500 rounded-lg p-4 my-6 mx-1 w-full border border-black cursor-pointer hover:bg-gray-300 hover:text-black" onClick={handleSubmit}>{islogin ? "Log In" : "Sign Up"}</button>
+				{(islogin) && <button className="text-white text-sm my-6 mx-1 w-full cursor-pointer" onClick={handleClick}>New user? Sign Up</button>}
+				{(!islogin) && <button className="text-white text-sm my-6 mx-1 w-full cursor-pointer" onClick={handleClick}>Already a user? Log In</button>}
 			</form>
 		</div>
 	);

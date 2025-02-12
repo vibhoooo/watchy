@@ -28,10 +28,10 @@ const Header = () => {
 			/>
 			{user && (
 				<div className="flex justify-between">
-					<div className="m-4 p-2 rounded-xl bg-red-500 hover:bg-gray-300 cursor-pointer">
+					<div className="m-4 p-2 rounded-xl bg-red-500 hover:bg-gray-300 hover:text-black cursor-pointer text-white opacity-80">
 						{user.displayName}
 					</div>
-					<button className="m-4 p-2 rounded-xl bg-red-500 hover:bg-gray-300 cursor-pointer" onClick={handleClick}>Sign Out</button>
+					<button className="m-4 p-2 rounded-xl bg-red-500 hover:bg-gray-300 hover:text-black cursor-pointer text-white opacity-80" onClick={handleClick}>Sign Out</button>
 				</div>
 			)}
 		</div>

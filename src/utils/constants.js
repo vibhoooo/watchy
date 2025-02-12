@@ -10,7 +10,7 @@ export const API_URL = "https://api.themoviedb.org/3/movie/now_playing?language=
 
 export const API_URL_BG = "https://api.themoviedb.org/3/movie/";
 
-export const BG_VID = "https://www.youtube.com/embed/LH1J1EbqCaI?si=jWM7vFvTfw9cXMTk&amp;controls=0&autoplay=1&mute=1&rel=0&controls=0&modestbranding=1";
+export const BG_VID = "https://www.youtube.com/embed/LH1J1EbqCaI?si=jWM7vFvTfw9cXMTk&amp;controls=0&autoplay=1&mute=1&rel=0&controls=0&modestbranding=1&loop=1";
 
 export const options = {
   method: "GET",
