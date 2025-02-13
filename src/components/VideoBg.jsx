@@ -5,9 +5,9 @@ const VideoBg = ({id}) => {
 	useVideoBg(id);
 
 	return (
-		<div className="absolute w-screen aspect-video">
+		<div className="absolute w-screen aspect-video z-60">
 			<iframe
-				className="w-screen aspect-video"
+				className="w-screen aspect-video z-60"
 				src={BG_VID}
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				referrerPolicy="strict-origin-when-cross-origin"

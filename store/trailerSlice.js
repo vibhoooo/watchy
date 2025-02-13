@@ -15,7 +15,7 @@ const trailerSlice = createSlice(
 			}
 		}
 	}
-)
+);
 
 export const {addTrailer, removeTrailer} = trailerSlice.actions;
 

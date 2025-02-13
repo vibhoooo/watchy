@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 const MainContainer = () => {
 	const movies = useSelector((store) => {
 		return store.movie.now;
-	})
+	});
 
 	if(movies === null) {
 		return;
@@ -20,7 +20,7 @@ const MainContainer = () => {
 	const id = movies[0]?.id;
 
 	return (
-		<div>
+		<div className="absolute w-screen z-50 aspect-video">
 			<VideoTitle title={title} overview={overview} />
 			<VideoBg id={id} />
 		</div>

@@ -9,21 +9,21 @@ const useVideoBg = (id) => {
 	
 	useEffect(() => {
 		const fetchData = async () => {
-		const res = await fetch(
-			API_URL_BG + id + "/videos?language=en-US",
-			options
-		);
-		const data = await res?.json();
+			const res = await fetch(
+				API_URL_BG + id + "/videos?language=en-US",
+				options
+			);
+			const data = await res?.json();
 
-		const { results } = data;
+			const { results } = data;
 
-		const filtered = results.filter((obj) => {
-			return obj.type === "Trailer";
-		});
+			const filtered = results.filter((obj) => {
+				return obj.type === "Trailer";
+			});
 
-		const [first] = filtered;
+			const [first] = filtered;
 
-		dispatch(addTrailer(first));
+			dispatch(addTrailer(first));
 		};
 
 		fetchData();
