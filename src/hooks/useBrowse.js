@@ -9,55 +9,55 @@ import {addUpcoming} from "../../store/upcomingSlice";
 import {API_URL_POPULAR, API_URL_TOP, API_URL_UPCOMING} from "../utils/constants";
 
 const useBrowse = () => {
-  const dispatch = useDispatch();
+	const dispatch = useDispatch();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch(API_URL, options);
-      const data = await res?.json();
+	useEffect(() => {
+		const fetchData = async () => {
+			const res = await fetch(API_URL, options);
+			const data = await res?.json();
 
-      const {results} = data;
+			const {results} = data;
 
-      dispatch(addMovie(results));
-    }
+			dispatch(addMovie(results));
+		}
 
-	const fetchData2 = async () => {
-		const res = await fetch(API_URL_POPULAR, options);
-		const data = await res?.json();
+		const fetchData2 = async () => {
+			const res = await fetch(API_URL_POPULAR, options);
+			const data = await res?.json();
 
-		const {results} = data;
+			const {results} = data;
 
-		dispatch(addPopular(results));
-	}
+			dispatch(addPopular(results));
+		}
 
-	const fetchData3 = async () => {
-		const res = await fetch(API_URL_TOP, options);
-		const data = await res?.json();
+		const fetchData3 = async () => {
+			const res = await fetch(API_URL_TOP, options);
+			const data = await res?.json();
 
-		const {results} = data;
+			const {results} = data;
 
-		dispatch(addTop(results));
-	}
+			dispatch(addTop(results));
+		}
 
-	const fetchData4 = async () => {
-		const res = await fetch(API_URL_UPCOMING, options);
-		const data = await res?.json();
+		const fetchData4 = async () => {
+			const res = await fetch(API_URL_UPCOMING, options);
+			const data = await res?.json();
 
-		const {results} = data;
+			const {results} = data;
 
-		dispatch(addUpcoming(results));
-	}
+			dispatch(addUpcoming(results));
+		}
 
-    fetchData();
+		fetchData();
 
-	fetchData2();
+		fetchData2();
 
-	fetchData3();
+		fetchData3();
 
-	fetchData4();
+		fetchData4();
 
-    return () => {};
-  }, []);
+		return () => {};
+	}, []);
 };
 
 export default useBrowse;

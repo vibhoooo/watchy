@@ -26,3 +26,66 @@ export const options = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZjNmNjQxNjNjYTc2OTIyNTc1Mzg0NzkxOTg1MmM5NyIsIm5iZiI6MTczOTEwNTg3Mi4zNTM5OTk5LCJzdWIiOiI2N2E4YTY1MGY1YWFhNmFmYTllMDhjZDIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.1T3gQ9eHG4OVi3D8XcIybu6tggYAZtJKHbbCVoUU0pY",
   },
 };
+
+export const LANG = [
+	{
+		identifier: "en",
+		value: "English"
+	},
+	{
+		identifier: "hin",
+		value: "हिंदी"
+	},
+	{
+		identifier: "spn",
+		value: "Español"
+	}
+];
+
+export const CONV = {
+	placeholder: {
+		en: "What would you like to see today?",
+		hin: "आज आप क्या देखना चाहेंगे?",
+		spn: "¿Qué te gustaría ver hoy?"
+	},
+	search: {
+		en: "Search",
+		hin: "खोज",
+		spn: "Buscar"
+	},
+	home: {
+		en: "Home",
+		hin: "घर",
+		spn: "Hogar"
+	},
+	signOut: {
+		en: "Sign Out",
+		hin: "साइन आउट",
+		spn: "Desconectar"
+	},
+	gptSearch: {
+		en: "GPT Search",
+		hin: "जीपीटी खोज",
+		spn: "Búsqueda GPT"
+	},
+	nowPlaying: {
+		en: "NOW PLAYING",
+		hin: "अब खेल रहे हैं",
+		spn: "AHORA JUGANDO",
+	},
+	popular: {
+		en: "POPULAR",
+		hin: "लोकप्रिय",
+		spn: "POPULAR",
+	},
+	topRated: {
+		en: "TOP RATED",
+		hin: "टॉप रेटेड",
+		spn: "mejor valorado",
+	},
+	upcoming: {
+		en: "UPCOMING",
+		hin: "आगामी",
+		spn: "próximo",
+	}
+};

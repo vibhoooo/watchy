@@ -1,5 +1,6 @@
 import {useSelector} from "react-redux";
 import MovieList from "./MovieList";
+import {CONV} from "../utils/constants";
 
 const SecondaryContainer = () => {
 	const movies = useSelector((store) => {
@@ -18,6 +19,10 @@ const SecondaryContainer = () => {
 		return store.upcoming.upcoming;
 	});
 
+	const lang = useSelector((store) => {
+		return store.lang.lang;
+	});
+
 	if((movies ===  null) || (popularMovies === null) || (topMovies === null) || (upcomingMovies === null)) {
 		return;
 	}
@@ -30,10 +35,10 @@ const SecondaryContainer = () => {
 		<div>
 			<div className="absolute w-full mt-[800px] z-[51] bg-black">
 				<div className="-mt-30">
-					<MovieList title={"NOW PLAYING"} list={movies} />
-					<MovieList title={"POPULAR"} list={popularMovies} /> 
-					<MovieList title={"TOP RATED"} list={topMovies} />
-					<MovieList title={"UPCOMING"} list={upcomingMovies} />
+					<MovieList title={CONV.nowPlaying[lang]} list={movies} />
+					<MovieList title={CONV.popular[lang]} list={popularMovies} /> 
+					<MovieList title={CONV.topRated[lang]} list={topMovies} />
+					<MovieList title={CONV.upcoming[lang]} list={upcomingMovies} />
 				</div>
 			</div>
 		</div> 

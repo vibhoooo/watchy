@@ -23,8 +23,8 @@ Login -> Header, form
 19 -> constants.js
 20 -> TMDB API (Using API, Redux)
 21 -> Custom hook
-22 -> MainContainer
-23 -> SecondaryContainer
+22 -> Main Container
+23 -> Secondary Container
 24 -> VideoTitle
 25 -> VideoBg
 27 -> TMDB API (Using API, Redux)
@@ -33,4 +33,8 @@ Login -> Header, form
 30 -> Secondary Container (Using API, Redux)
 31 -> Design
 32 -> Custom hook
-
+33 -> GPT Search
+34 -> GPT Search Page
+35 -> GPT Search Bar
+36 -> Multi lang support
+37 -> Design Improvement
