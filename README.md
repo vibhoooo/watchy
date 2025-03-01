@@ -38,3 +38,7 @@ Login -> Header, form
 35 -> GPT Search Bar
 36 -> Multi lang support
 37 -> Design Improvement
+38 -> OpenAI API (Using API, Redux)
+39 -> TMDB API (Using API, Redux)
+40 -> Custom hook
+41 -> Design Improvement
