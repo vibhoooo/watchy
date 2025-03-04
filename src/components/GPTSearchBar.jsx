@@ -1,11 +1,17 @@
 import {useState} from "react";
-import {CONV} from "../utils/constants";
+import {CONV, options} from "../utils/constants";
 import {useSelector} from "react-redux";
 import client from "../utils/openai";
 import {CONTEXT} from "../utils/constants";
+import {API_URL_SEARCH_PART_1, API_URL_SEARCH_PART_2} from "../utils/constants";
+import {useDispatch} from "react-redux";
+import {addGPTMovie} from "../../store/gptMovieSlice";
+import {addGPTMovieDetail} from "../../store/gptMovieDetailSlice";
 
 const GPTSearchBar = () => {
 	const [prompt, setPrompt] = useState("");
+
+	const dispatch = useDispatch();
 
 	const handleChange = (e) => {
 		setPrompt(e.target.value);
@@ -15,19 +21,44 @@ const GPTSearchBar = () => {
 		return store.lang.lang;
 	});
 
+	const getDetail = async (movies) => {
+		const fetchData = async (movie) => {
+			const res = await fetch(API_URL_SEARCH_PART_1 + movie + API_URL_SEARCH_PART_2, options);
+			const data = await res?.json();
+			const fData = data?.results;
+			return fData;
+		}
+		const arr = movies.map((movie) => {
+			return fetchData(movie);
+		})
+		const data = await Promise.all(arr);
+		dispatch(addGPTMovieDetail(data));
+	}
+
+
 	const handleClick = () => {
 		async function main() {
-			const chatCompletion = await client.chat.completions.create({
-				messages: [{ role: 'user', content: CONTEXT + prompt }],
-				model: 'gpt-3.5-turbo',
+			const response = await client.chat.completions.create({
+				messages: [
+					{ role: "system", content: "" },
+					{ role: "user", content: CONTEXT + prompt },
+				],
+				model: "gpt-4o-mini",
+				temperature: 1,
+				max_tokens: 4096,
+				top_p: 1
 			});
-			console.log(chatCompletion.choices);
+			const movies = response.choices[0].message.content.split(",");
+			dispatch(addGPTMovie(movies));
+			getDetail(movies);
 		}
-		main();
+		main().catch((err) => {
+			console.error("The sample encountered an error:", err);
+		});
 	};
 
 	return (
-		<div className="absolute top-[40%] left-[25%] w-[50%] grid xl:grid-cols-12 grid-cols-1">
+		<div className="absolute top-80 left-90 w-[50%] grid xl:grid-cols-12 grid-cols-1 bg-black border border-black rounded-xl shadow-xl">
 			<input
 				className="text-white bg-gray-500 rounded-xl p-4 m-4 border border-black xl:col-span-10 shadow-xl"
 				type="text"

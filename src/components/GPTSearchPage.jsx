@@ -4,7 +4,7 @@ const GPTSearchPage = () => {
 	return (
 		<div>
 			<img
-				className="w-screen h-screen"
+				className="w-screen h-screen fixed"
 				src={BG_IMG}
 				alt="bg-img"
 			/>

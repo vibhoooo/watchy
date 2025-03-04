@@ -1,8 +1,19 @@
+import {useSelector} from "react-redux";
 import useVideoBg from "../hooks/useVideoBg";
 import {BG_VID} from "../utils/constants";
 
 const VideoBg = ({id}) => {
 	useVideoBg(id);
+
+	const trailer = useSelector((store) => {
+		return store.trailer.now;
+	});
+
+	if(trailer === null) {
+		return;
+	}
+
+	const {key} = trailer;
 
 	return (
 		<div className="absolute w-screen aspect-video z-60">

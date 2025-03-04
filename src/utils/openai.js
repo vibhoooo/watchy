@@ -1,8 +1,9 @@
 import OpenAI from "openai";
-import {OPENAPI_API_KEY} from "./constants";
+import {FREE_API_KEY, BASE_URL} from "./constants";
 
 const client = new OpenAI({
-	apiKey: OPENAPI_API_KEY,
+	apiKey: FREE_API_KEY,
+	baseURL: BASE_URL,
 	dangerouslyAllowBrowser: true
 });
 

@@ -41,4 +41,9 @@ Login -> Header, form
 38 -> OpenAI API (Using API, Redux)
 39 -> TMDB API (Using API, Redux)
 40 -> Custom hook
-41 -> Design Improvement
+41 -> Design Improvement (Shimmer UI, Error Page)
+42 -> Custom hook 
+43 -> GPT Search UI 
+44 -> .env
+45 -> Shimmer UI
+46 -> Memoization

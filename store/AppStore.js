@@ -7,6 +7,10 @@ import topReducer from "./topSlice";
 import popularReducer from "./popularSlice";
 import gptReducer from "./gptSlice";
 import langReducer from "./langSlice";
+import gptMovieReducer from "./gptMovieSlice";
+import gptMovieDetailReducer from "./gptMovieDetailSlice";
+import clickReducer from "./clickSlice";
+import prevGPTMovieReducer from "./prevGPTMovieSlice";
 
 const AppStore = configureStore({
 	reducer: {
@@ -17,7 +21,11 @@ const AppStore = configureStore({
 		top: topReducer,
 		upcoming: upcomingReducer,
 		gpt: gptReducer,
-		lang: langReducer
+		lang: langReducer,
+		gptMovie: gptMovieReducer,
+		gptMovieDetail: gptMovieDetailReducer,
+		click: clickReducer,
+		prevGPTMovie: prevGPTMovieReducer
 	}
 });
 
