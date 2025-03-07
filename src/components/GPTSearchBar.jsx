@@ -58,7 +58,7 @@ const GPTSearchBar = () => {
 	};
 
 	return (
-		<div className="absolute top-80 left-90 w-[50%] grid xl:grid-cols-12 grid-cols-1 bg-black border border-black rounded-xl shadow-xl">
+		<div className="absolute top-90 left-0 right-0 xl:top-80 xl:left-90 xl:w-[50%] grid xl:grid-cols-12 grid-cols-1 bg-black border border-black rounded-xl shadow-xl">
 			<input
 				className="text-white bg-gray-500 rounded-xl p-4 m-4 border border-black xl:col-span-10 shadow-xl"
 				type="text"

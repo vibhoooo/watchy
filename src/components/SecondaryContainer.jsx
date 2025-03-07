@@ -33,8 +33,8 @@ const SecondaryContainer = () => {
 
 	return (
 		<div>
-			<div className="absolute w-full mt-[800px] z-[51] bg-black">
-				<div className="-mt-30">
+			<div className="absolute w-full mt-[600px] sm:mt-[800px] z-[51] bg-black">
+				<div className="sm:-mt-30">
 					<MovieList title={CONV.nowPlaying[lang]} list={movies} />
 					<MovieList title={CONV.popular[lang]} list={popularMovies} /> 
 					<MovieList title={CONV.topRated[lang]} list={topMovies} />

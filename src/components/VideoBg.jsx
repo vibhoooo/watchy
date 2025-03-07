@@ -16,9 +16,9 @@ const VideoBg = ({id}) => {
 	const {key} = trailer;
 
 	return (
-		<div className="absolute w-screen aspect-video z-60">
+		<div className="absolute w-screen aspect-video z-50">
 			<iframe
-				className="w-screen aspect-video z-60"
+				className="w-screen aspect-video z-50 h-150 sm:h-200"
 				src={BG_VID}
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				referrerPolicy="strict-origin-when-cross-origin"

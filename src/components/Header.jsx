@@ -42,8 +42,8 @@ const Header = () => {
 	});
 
 	return (
-		<div className="fixed flex justify-between px-8 py-2 bg-gradient-to-b from-black z-100 w-screen">
-			<h1 className="font-bold text-red-600 mt-4 text-5xl subpixel-antialiased font-serif hover:scale-120 hover:shadow-xl hover:brightness-110 cursor-pointer transition-transform duration-300 ease-in-out">
+		<div className="fixed sm:flex sm:flex-row flex flex-col sm:justify-between px-8 py-2 bg-gradient-to-b from-black z-100 w-screen">
+			<h1 className="mx-auto sm:mx-0 font-bold text-red-600 mt-4 text-5xl subpixel-antialiased font-serif hover:scale-120 hover:shadow-xl hover:brightness-110 cursor-pointer transition-transform duration-300 ease-in-out">
 				WatchY
 			</h1>
 			{user && (

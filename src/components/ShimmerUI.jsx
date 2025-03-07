@@ -1,6 +1,6 @@
 const ShimmerUI = () => {
 	const arr = [1, 2, 3, 4, 5];
-	const arr2 = [1, 2, 3];
+	const arr2 = [1];
 
 	return (
 		<div className="absolute bg-black top-150 border-black border rounded-xl left-10 right-10 opacity-95">
